@@ -1,0 +1,31 @@
+int main()//main method
+{
+    double num1 ; // create variable
+    double num2; // create variable
+    char sign ; // create variable
+    printf("you can only do this operations ( + , - , * , / )\n "); //Instruction output massage
+    tryagain:
+   printf("what is first number ?\n"); // take input from user
+   scanf("%lf", &num1); // save input from user
+   printf("what is the sign      ?\n"); // take input from user
+   scanf("%s", &sign); // save input from user
+   printf("what is second number ?\n"); // take input from user
+   scanf("%lf", &num2); // save input from user
+   
+   if(sign=='+'){ // if condition
+       printf(" the result = %f ", num1+num2);//output massage
+   }else if(sign=='/'){
+       printf("the result = %f ", num1/num2);//output massage
+   }else if(sign=='-'){
+       printf("the result = %f ", num1-num2);//output massage
+   }else if(sign=='*')
+   {
+       printf("the result = %f ", num1*num2);//output massage
+   }else
+   {
+   printf("ERROR ... Try Again\n") ; //output massage
+   goto tryagain; //when user inuput undefind value the program will restart by using that loop
+   }
+
+    return 0;
+}
